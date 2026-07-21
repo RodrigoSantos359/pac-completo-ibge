@@ -86,6 +86,21 @@ function renderHome(string $tipoAlerta = '', string $mensagem = ''): void
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Open Graph / Social Meta Tags -->
+        <meta property="og:title" content="PAC Completo IBGE - Gerador Multi-empresa">
+        <meta property="og:description" content="Sistema web para gerar arquivos CSV do PAC (Pesquisa Anual de Comércio) do IBGE. Consulta CNPJs via BrasilAPI, integração com WK Radar e editor multi-empresa.">
+        <meta property="og:image" content="https://pac-completo-ibge.vercel.app/assets/img/preview-home.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://pac-completo-ibge.vercel.app">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="PAC Completo IBGE">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="PAC Completo IBGE - Gerador Multi-empresa">
+        <meta name="twitter:description" content="Gere arquivos CSV do PAC IBGE com consulta automática de CNPJs.">
+        <meta name="twitter:image" content="https://pac-completo-ibge.vercel.app/assets/img/preview-home.png">
+
         <title>PAC Completo IBGE - Gerador Multi-empresa</title>
         <link rel="stylesheet" href="/assets/style.css">
         <link rel="icon" href="data:image/png;base64,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">
@@ -498,6 +513,21 @@ function renderEditorMulti(array $empresas, int $ano): void
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Open Graph / Social Meta Tags -->
+        <meta property="og:title" content="PAC Completo IBGE - Editor Multi-empresa">
+        <meta property="og:description" content="Revise e edite os dados de todas as empresas antes de gerar o CSV do PAC IBGE.">
+        <meta property="og:image" content="https://pac-completo-ibge.vercel.app/assets/img/preview-editor.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:url" content="https://pac-completo-ibge.vercel.app">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="PAC Completo IBGE">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="PAC Completo IBGE - Editor Multi-empresa">
+        <meta name="twitter:description" content="Revise e edite os dados de todas as empresas antes de gerar o CSV do PAC IBGE.">
+        <meta name="twitter:image" content="https://pac-completo-ibge.vercel.app/assets/img/preview-editor.png">
+
         <title>Editar (<?= $total ?> empresas) - PAC Completo IBGE</title>
         <link rel="stylesheet" href="/assets/style.css">
         <link rel="icon" src="https://img.icons8.com/nolan/64/gps-receiving.png">
