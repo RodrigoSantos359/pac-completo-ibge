@@ -178,7 +178,7 @@ Campos preenchidos automaticamente pela BrasilAPI:
 | CNAE e atividade | ✅ Automático |
 | Situação cadastral | ✅ Automático |
 | Site, Redes Sociais | ❌ Manual |
-| Responsável | ❌ Manual |
+| Responsável | ✅ Automático |
 | Forma de Tributação | ❌ Manual |
 | Pessoal, Receitas, Despesas | ❌ Manual ou WK Radar |
 
