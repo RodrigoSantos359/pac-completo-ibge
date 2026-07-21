@@ -20,58 +20,13 @@
 
 ### Página Inicial — Consulta de CNPJs
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  🟦 PAC                                      ⚙️ WK Radar  │
-│                📊 Gerador PAC Completo                      │
-│                                                             │
-│    Consulte dados cadastrais de uma ou várias empresas      │
-│    gratuitamente via BrasilAPI                              │
-│                                                             │
-│    ┌─────────────────────────────────────────────────┐       │
-│    │   Digite os CNPJs (um por linha)                │       │
-│    │   27865757000102                                │       │
-│    │   60820694000107                                │       │
-│    │   33000167000107                                │       │
-│    └─────────────────────────────────────────────────┘       │
-│                                                             │
-│           [ 🔍 Consultar CNPJs ]                            │
-│                                                             │
-│    ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
-│    │1.Informar│  │2.Brasil  │  │3.WK Radar│  │4.Revisar │  │
-│    │  CNPJs   │  │   API    │  │(opcional)│  │ & Editar │  │
-│    └──────────┘  └──────────┘  └──────────┘  └──────────┘  │
-└─────────────────────────────────────────────────────────────┘
-```
+<img src="assets/img/preview-home.png" alt="Página inicial do PAC Completo IBGE" width="700" style="border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
 
 ### Editor Multi-Empresa com Abas
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  🟦 PAC                          ✅ 15/30 campos   [Início] │
-│                                                             │
-│     [Empresa A ✅] [Empresa B ⚠️] [Empresa C ✅]            │
-│                                                             │
-│  ┌──────────────────────────────────────────────────────┐   │
-│  │  📋 DADOS CADASTRAIS DA SEDE                        │   │
-│  │  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌──────────┐   │   │
-│  │  │CNPJ Raiz│ │ Sufixo  │ │   DV    │ │Razão     │   │   │
-│  │  │27865757 │ │ 0001    │ │   02    │ │Social... │   │   │
-│  │  └─────────┘ └─────────┘ └─────────┘ └──────────┘   │   │
-│  │  ...                                                  │   │
-│  └──────────────────────────────────────────────────────┘   │
-│                                                             │
-│              [ 👁️ Preview CSV ] [ 💾 Gerar CSV ]            │
-└─────────────────────────────────────────────────────────────┘
-```
+<img src="assets/img/preview-editor.png" alt="Editor multi-empresa do PAC Completo IBGE" width="700" style="border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);">
 
 </div>
-
-> 💡 **Dica:** Para capturar screenshots reais, use a ferramenta do seu navegador:
-> 1. Acesse [pac-completo-ibge.vercel.app](https://pac-completo-ibge.vercel.app)
-> 2. Pressione `F12` → `Ctrl+Shift+P` → digite "screenshot"
-> 3. Escolha "Capture full size screenshot"
-> 4. Salve em `assets/img/` e substitua os placeholders acima
 
 ---
 
@@ -151,30 +106,6 @@ Abra [http://localhost:8000](http://localhost:8000)
 
 ---
 
-## ✨ Funcionalidades
-
-### ✅ Consulta Automática de CNPJ
-- Digite **um ou vários CNPJs** (um por linha)
-- Consulta gratuita via [BrasilAPI](https://brasilapi.com.br)
-- Dados cadastrais da Receita Federal preenchidos automaticamente
-
-### ✅ Múltiplas Empresas
-- Suporte a **lote de CNPJs** em uma única consulta
-- Navegação por **abas** entre as empresas
-- Geração de **CSV único** com todas as empresas
-
-### ✅ WK Radar (Opcional)
-- Integração com API do WK Radar para dados financeiros
-- Token configurável pela interface web
-- Dados de balancete/DRE aplicados automaticamente
-
-### ✅ Editor Completo
-- Todos os campos do layout oficial do IBGE
-- Validação de campos obrigatórios em tempo real
-- Seções organizadas: Sede, Unidade de Coleta, Responsável, Situação, Pessoal, Receitas, Despesas, Estoques, Mercadorias
-
----
-
 ## 📁 Estrutura do Projeto
 
 ```
@@ -198,7 +129,8 @@ preenche_pac_completo/
 │
 ├── assets/
 │   ├── style.css               # Estilização moderna e responsiva
-│   └── script.js               # Interatividade no navegador
+│   ├── script.js               # Interatividade no navegador
+│   └── img/                    # Imagens e screenshots do projeto
 │
 ├── wk_contas_config.json       # Mapeamento de contas do WK Radar
 ├── .github/workflows/ci.yml    # GitHub Actions (CI automática)
