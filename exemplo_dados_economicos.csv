@@ -1,0 +1,95 @@
+;INFORMAÇÕES ECONÔMICAS DA EMPRESA;
+;CÓDIGO;DESCRIÇÃO;VALOR
+
+;== RECEITAS (códigos 21-29) ==;
+21;Revenda de Mercadorias (Receita Bruta);4.782.963
+21A;Comissões sobre Vendas de Representação Comercial;4.782.963
+22;Venda de Produtos de Fabricação Própria;-
+23;Serviços de Manutenção e Reparação;4.782.963
+24;Royalties de Franquias;4.782.963
+25;Outras Atividades (lanchonetes, restaurantes, etc.);4.782.963
+26;(-) Vendas Canceladas, Abatimentos e Descontos;-
+27;(-) ICMS sobre Vendas;-
+28;(-) PIS/PASEP;-
+29;(-) Outros Impostos s/ Vendas (IPI, ISS, COFINS);-
+
+;== DEMAIS RECEITAS (códigos 31-36) ==;
+31;Aluguel de Imóveis, Máquinas e Equipamentos;4.782.963
+32;Receitas Financeiras (juros, descontos obtidos);4.574.469
+33;Variações Monetárias Ativas;339.841
+34;Resultado Positivo em Participações Societárias;3.979.931
+35;Demais Receitas Operacionais;18.271.548
+36;Outras Receitas (lucro na alienação de bens);4.782.963
+
+;== CUSTOS E COMPRAS ==;
+ESTOQUE;Mercadorias para Revenda (Compras);4.782.963
+CMV;Custo das Mercadorias Vendidas (DRE);4.782.963
+046;Mercadorias para Revenda (Compras - Detalhado);76.008
+047;Matérias-Primas para Fabricação Própria;-
+048;Material de Embalagem e Outros Materiais;-
+
+;== ESTOQUES (Início do Ano) ==;
+050;Estoque Inicial - Mercadorias p/ Revenda (31/12/2024);-
+051;Estoque Inicial - Produtos Acabados (31/12/2024);-
+052;Estoque Inicial - Matérias-Primas (31/12/2024);-
+053;Estoque Inicial - Material de Embalagem (31/12/2024);-
+
+;== ESTOQUES (Final do Ano) ==;
+055;Estoque Final - Mercadorias p/ Revenda (31/12/2025);-
+056;Estoque Final - Produtos Acabados (31/12/2025);-
+057;Estoque Final - Matérias-Primas (31/12/2025);-
+058;Estoque Final - Material de Embalagem (31/12/2025);-
+
+;== GASTOS COM PESSOAL (códigos 61-68) ==;
+61;Salários e Outras Remunerações (13º, férias, etc.);4.782.963
+62;Participação nos Lucros e Honorários da Diretoria;6.252.596
+63;Retiradas Pró-labore;4.782.963
+64;Contribuições para a Previdência Social (INSS);189.921.157
+65;FGTS;4.782.963
+66;Contribuições para Previdência Privada;4.782.963
+67;Indenizações Trabalhistas e Rescisões;3.219.967
+68;Benefícios (transporte, alimentação, saúde, etc.);-
+068A;PIS sobre Folha de Pagamento;-
+
+;== DESPESAS OPERACIONAIS (códigos 70-90) ==;
+70;Aluguéis de Imóveis;869.427
+70A;Aluguéis de Máquinas, Equipamentos e Veículos;251.841
+71;Condomínios (inclusive taxas de shopping);-
+72;Comissões Pagas a Representantes Comerciais;163.372
+73;Publicidade e Propaganda (marketing, feiras);601.522
+74;Combustíveis, Peças e Acessórios (transporte);4.782.963
+75;Serviços de Profissionais Liberais (PF);182.493
+76;Serviços Técnico-Profissionais (PJ);-
+77;Vigilância, Segurança e Transporte de Valores;-
+78;Fretes e Carretos (sobre vendas);1.004.565
+79;Mão-de-obra Temporária (locadoras);348.082
+80;Manutenção e Reparação (imóveis, máquinas);4.253
+81;Outros Serviços PJ (limpeza, portaria, etc.);4.782.963
+82;Serviços de Comunicação (correio, tel., internet);498.326
+83;Energia Elétrica, Gás, Água e Esgoto;-
+84;Armazenagem, Despesas Portuárias;-
+85;Prêmios de Seguros;-
+86;Impostos e Taxas (IPTU, IPVA, IOF, alvarás);1.124.923
+87;Viagens e Representações (diárias, estadias);4.054.157
+88;Material de Expediente, Consumo e Limpeza;4.664
+89;Royalties (uso de marcas, patentes, franquias);21.939
+89B;PIS/COFINS sobre Outras Receitas;-
+90;Demais Despesas Operacionais;22.637.987
+
+;== DESPESAS FINANCEIRAS (códigos 92-96) ==;
+092;Arrendamento Mercantil Financeiro (leasing);17.985
+093;Despesas Financeiras (juros, factoring);8.629
+94;Variações Monetárias Passivas;-
+95;Comissões p/ Administradoras de Cartão de Crédito;44.689
+96;Resultado Negativo em Participações Societárias;789.188
+
+;== DEPRECIAÇÃO E PROVISÕES (códigos 98-101) ==;
+98;Depreciação e Amortização;-
+098A;Depreciação de Ativos de Arrendamento Operacional;-
+99;Outras Despesas (impairment, perdas);177.040
+100;Provisão para IRPJ e CSLL;-
+101;Outras Provisões (contingências, PDD);-
+
+;== RESULTADO DO EXERCÍCIO (códigos 103-104) ==;
+103;Lucro (Resultado do Exercício);-
+104;Prejuízo (Resultado do Exercício);-

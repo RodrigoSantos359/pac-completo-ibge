@@ -1,0 +1,17 @@
+node_modules/
+vendor/
+.git/
+.gitignore
+*.log
+php_server.log
+.DS_Store
+.idea/
+.vscode/
+.env
+.env.example
+README.md
+teste_geracao.php
+exemplo_dados_economicos.csv
+relatorioIBGE_para_sistema.csv
+pac_layout.txt
+pac_layout_raw.txt

@@ -1,0 +1,31 @@
+# PHP
+vendor/
+composer.lock
+
+# Node
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+php_server.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+
+# Vercel
+.vercel/
+
+# tests
+teste_geracao.php

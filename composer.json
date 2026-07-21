@@ -1,0 +1,17 @@
+{
+  "name": "pac-completo-ibge/gerador-web",
+  "description": "Gerador PAC Completo IBGE - Sistema web para gerar CSV da Pesquisa Anual de Comércio",
+  "type": "project",
+  "require": {
+    "php": "^8.0",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-session": "*"
+  },
+  "scripts": {
+    "vercel": [
+      "@php -v"
+    ]
+  }
+}

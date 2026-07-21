@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.9.0",
+      "memory": 3008,
+      "maxDuration": 60
+    }
+  },
+  "routes": [
+    { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ]
+}

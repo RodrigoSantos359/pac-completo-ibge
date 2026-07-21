@@ -1,0 +1,101 @@
+{
+  "_comentario": "Mapeamento de contas contabeis do WK Radar para campos do PAC",
+  "_instrucao": "Edite os codigos de conta de acordo com o plano de contas da sua empresa no WK Radar",
+  "_formato_prefixo": "O sistema soma todas as contas que comecam com o prefixo informado",
+  "verso": 1,
+  "campos": {
+    "receita_revenda": {
+      "descricao": "Receita Bruta de Revenda de Mercadorias",
+      "contas_incluir": ["3.01.01"],
+      "contas_excluir": ["3.01.02", "3.01.03"]
+    },
+    "receita_venda_produtos": {
+      "descricao": "Receita de Venda de Produtos Industrializados",
+      "contas_incluir": ["3.01.02"]
+    },
+    "receita_servicos": {
+      "descricao": "Receita de Servicos Prestados",
+      "contas_incluir": ["3.01.03"]
+    },
+    "receita_outras_atividades": {
+      "descricao": "Outras Receitas Operacionais",
+      "contas_incluir": ["3.01.99"]
+    },
+    "deducoes_vendas": {
+      "descricao": "Deducoes das Vendas",
+      "contas_incluir": ["3.02"]
+    },
+    "receita_liquida": {
+      "descricao": "Receita Liquida (soma das receitas - deducoes)",
+      "contas_incluir": []
+    },
+    "outras_receitas": {
+      "descricao": "Outras Receitas Nao Operacionais / Financeiras",
+      "contas_incluir": ["3.06"]
+    },
+    "despesa_mercadorias_insumos": {
+      "descricao": "CMV / Consumo de Insumos",
+      "contas_incluir": ["3.02.01"]
+    },
+    "despesa_combustiveis": {
+      "descricao": "Consumo de Combustiveis",
+      "contas_incluir": ["3.03.10"]
+    },
+    "despesa_leasing": {
+      "descricao": "Arrendamento Mercantil (Leasing)",
+      "contas_incluir": ["3.03.11"]
+    },
+    "despesa_alugueis": {
+      "descricao": "Alugueis e Condominios",
+      "contas_incluir": ["3.03.04"]
+    },
+    "despesa_utilidades": {
+      "descricao": "Agua, Esgoto, Gas e Energia Eletrica",
+      "contas_incluir": ["3.03.06"]
+    },
+    "despesa_servicos_terceiros": {
+      "descricao": "Servicos Prestados por Terceiros (PJ)",
+      "contas_incluir": ["3.03.05"]
+    },
+    "despesa_pessoal": {
+      "descricao": "Despesas com Pessoal (Salarios, Encargos e Beneficios)",
+      "contas_incluir": ["3.03.01", "3.03.02", "3.03.03"]
+    },
+    "despesa_tributos": {
+      "descricao": "Despesas com Tributos",
+      "contas_incluir": ["3.04"]
+    },
+    "despesa_depreciacao": {
+      "descricao": "Depreciacao e Amortizacao",
+      "contas_incluir": ["3.03.08"]
+    },
+    "despesa_financeiras": {
+      "descricao": "Despesas Financeiras",
+      "contas_incluir": ["3.05"]
+    },
+    "despesa_outras_operacionais": {
+      "descricao": "Outras Despesas Operacionais",
+      "contas_incluir": ["3.03.99"]
+    },
+    "salarios_anuais": {
+      "descricao": "Salarios, Pro-labore e Retiradas",
+      "contas_incluir": ["3.03.01.001", "3.03.01.002"]
+    },
+    "encargos_sociais": {
+      "descricao": "Encargos Sociais (INSS, FGTS, etc)",
+      "contas_incluir": ["3.03.02"]
+    },
+    "estoque_fim_ano": {
+      "descricao": "Estoque Final de Mercadorias",
+      "contas_incluir": ["1.01.01"]
+    },
+    "imobilizado_fim_ano": {
+      "descricao": "Ativo Imobilizado Bruto",
+      "contas_incluir": ["1.02.01"]
+    },
+    "depreciacao_acumulada_fim": {
+      "descricao": "Depreciacao Acumulada (saldo final)",
+      "contas_incluir": ["1.02.02"]
+    }
+  }
+}

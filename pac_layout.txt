@@ -1,0 +1,1363 @@
+                                 Ministério da Economia
+                   Instituto Brasileiro de Geografia e Estatística
+
+                                   Diretoria de Pesquisas
+             Coordenação de Pesquisas Estruturais por Empresa
+
+Manual de Importação de
+Questionário
+
+           PAC - Completo
+
+                                         Rio de Janeiro
+                                                2026
+          Manual de Importação de questionário
+
+        INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATISTICA
+        Manual de Importação de Questionário. Pesquisa Anual de Comércio -
+        Completo. Coordenação de Pesquisas Estruturais por Empresa. Rio de
+        Janeiro: IBGE, 2025, p. 37.
+
+                                      © Projeto gráfico e editoração: DPE/GPO
+
+2
+         Manual de Importação de questionário
+
+Sumário
+
+1.  INTRODUÇÃO .......................................................................................................................4
+
+2.  FORMATO DO ARQUIVO.........................................................................................................4
+
+3.  FORMATO DOS REGISTROS......................................................................................................4
+
+4.  IMPORTAÇÃO ....................................................................................................................... 7
+
+5.  ERROS .................................................................................................................................8
+
+6.  CORRESPONDÊNCIA ENTRE O QUESTIONÁRIO E OS REGISTROS/POSIÇÕES DO LAYOUT .....................9
+
+7.  ANEXO ­ LAYOUT DE IMPORTAÇÃO.......................................................................................24
+
+                                               3
+           Manual de Importação de questionário
+
+1. Introdução
+
+   O informante tem a possibilidade de importar os dados dos seus sistemas
+contábil/gerencial para os questionários eletrônicos do IBGE, por meio de um
+arquivo no formato .csv. Esta funcionalidade permitirá que um ou mais
+questionários sejam importados de uma única vez, com o objetivo de agilizar o
+preenchimento e reduzir os erros de digitação. Neste manual encontram-se as
+instruções para a correta importação de dados oriundos de outros sistemas de
+informação para o "Questionário PAC Modelo Completo".
+
+2. Formato do arquivo
+
+   O arquivo a ser gerado para importação deverá estar no formato .csv, e deverá
+conter os registros segundo um layout pré-definido (ver layout do arquivo em
+anexo).
+
+3.Formato dos registros
+
+     Cada arquivo poderá conter registros de mais de uma empresa, ou seja,
+         caso um escritório de contabilidade seja responsável pelo preenchimento
+         de questionários de diversas empresas, ele poderá importar vários
+         questionários por meio de apenas um arquivo .csv.
+
+     Cada linha do arquivo representa um questionário de uma empresa
+         diferente, ou seja, os registros de uma mesma empresa devem ser informados
+         na horizontal, lado a lado. O layout de modelo completo tem 306 registros.
+         Cada registro corresponde a um campo no questionário. No arquivo .csv,
+         esses campos devem ser informados em sequência, na mesma linha
+         separado por ponto e virgulas.
+
+     A quantidade de registros do arquivo é fixa, pois deve corresponder a todos
+         os campos editáveis do questionário simplificado. Desta forma, deve ser
+         respeitada a quantidade de ; (ponto e vírgula) no arquivo, caso contrário o
+         mesmo será considerado incompleto.
+
+     Os registros terão seu tamanho variável conforme o conteúdo, porém deverá
+         ser respeitado o tamanho máximo informado para cada registro no layout.
+
+   4
+                                                                                     Manual de Importação de questionário
+
+     Os registros numéricos devem ser informados em reais, sem centavos e sem
+         separador de milhar. Por exemplo, o valor R$36.102,43, deve ser informado
+         no arquivo da seguinte forma: 36102.
+
+     Os campos totalizadores do questionário não são importáveis, eles são
+         calculados automaticamente pelo sistema do Questionário Eletrônico e por
+         isso não estão presentes no layout do arquivo de importação.
+
+     Ainda que o sistema de informações da sua empresa não esteja apto a
+         informar todos os campos requeridos pelo questionário do IBGE (por
+         exemplo: alguns sistemas contábeis não contemplam número de pessoas
+         ocupadas), sugerimos que exporte para o arquivo .csv o máximo de dados
+         que possam ser fornecidos pelo seu sistema. Os campos do questionário que
+         o seu sistema estiver impossibilitado de informar, podem ficar em branco
+         (entre ponto e vírgulas) no seu arquivo .csv, e logo após a importação para
+         o "Questionário Eletrônico", podem ser preenchidos manualmente. Dados
+         cadastrais básicos como, CNPJ e Razão social são pré-requisitos para a
+         importação de um arquivo .csv.
+
+    Veja abaixo um exemplo de arquivo onde são enviados os questionários de 3
+empresas. Para efeitos didáticos trabalharemos neste exemplo com os 6 primeiros
+registros do arquivo de layout:
+
+   Layout PAC completo dos 6 primeiros campos:
+
+                                                                                       5
+           Manual de Importação de questionário
+
+   O arquivo fica dessa forma:
+
+     A coluna "observações" no layout do arquivo informa se o registro tem
+         formato texto ou numérico.
+
+     Caso algum registro em formato texto deva permanecer em branco, basta
+         deixar os campos sem dígitos, entre ponto e virgulas.
+
+     Caso algum registro em formato numérico seja zero, basta deixar os campos
+         sem dígitos ou inserir o número 0 (zero), ambos entre ponto e virgulas.
+
+     Observe como ficaria o trecho do arquivo .csv de uma empresa entre os
+         registros 115 e 123 (capítulo 14 ­ Gastos com pessoal no ano) que não tivesse
+         valores a informar referentes a "retiradas de pró-labore" e "PIS sobre folha de
+         pagamento", posições 116 e 123 respectivamente:
+
+Layout:
+
+   6
+                                                                                     Manual de Importação de questionário
+
+   O arquivo .csv para importação ficaria dessa forma (neste arquivo está sendo
+informado apenas uma empresa, por isso tem apenas uma linha). Os campos
+numéricos zerados podem ficar em branco (ponto e vírgula seguido de outro
+ponto e vírgula) ou com o número zero:
+
+4. Importação
+
+     Para importar o arquivo .csv acesse o menu: ferramentas/importar
+         questionário:
+
+     Escolha o arquivo que deseja importar e clique em "Abrir"
+
+                                                                                       7
+           Manual de Importação de questionário
+
+     A mensagem "Importação concluída com sucesso!" será exibida ao fim do
+         relatório.
+
+     Em seguida, para visualizar o questionário, acesse o menu: Arquivo/Abrir
+         CNPJ
+
+     Analise o questionário importado e clique em "verificar pendências" .
+         Se houver pendências, retifique os dados necessários para soluciona-las.
+
+5. Erros
+
+   Após importar o arquivo, o sistema do "Questionário Eletrônico" pode apontar
+erros, verifique os erros descritos no relatório de importação e faça as devidas
+alterações no arquivo. Junto aos erros aparecem mensagens de como soluciona-
+los. Veja um exemplo de erro:
+
+   8
+                                                                                     Manual de Importação de questionário
+
+        Descrição do Erro:
+        Dados na posição 306 para inclusão no campo V0233 deve ser numérico mas
+        possui caracter(es) alfanumérico(s). O valor será gravado zero para este
+        campo. Valor Informado: Ab
+        Solução: altere o referido campo inserindo apenas números.
+        Existem erros, como o exposto acima, que não impedem a importação do
+arquivo.
+        Se for necessário substituir no sistema o questionário de uma empresa que já
+foi importada, exclua o questionário do mesmo CNPJ que já se encontra no
+sistema. Não é possível sobrepor o questionário já existente.
+
+6. Correspondência entre o questionário e os
+   registros/posições do layout
+
+     Os registros/posições de 1 a 22 e 61 a 65 equivalem ao capítulo 03 do
+         questionário completo, "Dados cadastrais da sede da empresa (Matriz)":
+
+                                                                                       9
+       Manual de Importação de questionário
+
+  Os registros/posições de 22 a 42 e 60 equivalem ao capítulo 03 do
+      questionário completo, "Dados cadastrais da unidade de coleta":
+
+10
+                                                                                Manual de Importação de questionário
+
+ Os registros/posições de 43 a 59 equivalem ao capítulo 04 do questionário
+    completo, "Dados cadastrais complementares":
+
+                                                                                   11
+       Manual de Importação de questionário
+
+  Os registros/posições de 66 a 81 equivalem ao capítulo 05 do questionário
+      completo, "Número de pessoas ocupadas":
+
+12
+                                                                                Manual de Importação de questionário
+
+ Os registros/posições de 82 a 91 equivalem ao capítulo 06 do questionário
+    completo, "Demonstrativo da receita no ano":
+
+                                                                                   13
+       Manual de Importação de questionário
+
+  Os registros/posições de 92 a 97 equivalem ao capítulo 07 do questionário
+      completo, "Demais receitas no ano":
+
+  Os registros/posições de 98 e 99 equivalem ao capítulo 08 do questionário
+      completo, "Receita líquida de revenda no ano, segundo classe de
+      comércio":
+
+  Os registros/posições de 100 a 103 equivalem ao capítulo 09 do questionário
+      completo, "Destino das vendas de mercadorias":
+
+14
+                                                                                Manual de Importação de questionário
+
+ Os registros/posições de 104 a 106 equivalem ao capítulo 10 do questionário
+    simplificado, "Compras líquidas no ano":
+
+ Os registros/posições de 107 a 114 equivalem ao capítulo 11 do questionário
+    simplificado, "Estoques":
+
+                                                                                   15
+       Manual de Importação de questionário
+
+  O registro/posição 117 equivale ao capítulo 12 do questionário completo,
+      "Custo das mercadorias revendidas":
+
+  Os registros/posições 118 a 126 equivalem ao capítulo 13 do questionário
+      completo, "Gastos com pessoal no ano":
+
+  Os registros/posições 127 a 155 equivalem ao capítulo 14 do questionário
+      completo, "Despesas Operacionais no ano":
+
+16
+                                                                                Manual de Importação de questionário
+
+ Os registros/posições 156 a 160 equivalem ao capítulo 15 do questionário
+    completo, "Despesas financeiras e de participações no ano":
+
+                                                                                   17
+       Manual de Importação de questionário
+
+  Os registros/posições 161 a 164 equivalem ao capítulo 16 do questionário
+      completo, "Depreciação, amortização, outras despesas e constituição das
+      provisões no ano":
+
+  Os registros/posições 165 e 166 equivalem ao capítulo 17 do questionário
+      completo, "Resultado do exercício após a provisão para imposto de renda
+      e contribuição social sobre lucro líquido":
+
+18
+                                                                                Manual de Importação de questionário
+
+ Os registros/posições 167 a 172 equivalem a coluna de "Aquisições de
+    terceiros" do capítulo 18 do questionário completo, "Aquisição (exceto
+    Leasing), produção própria e melhorias do ativo imobilizado no ano":
+
+ Os registros/posições 173 a 178 equivalem ao capítulo 18A do questionário
+    completo, "Baixas do ativo imobilizado no ano":
+
+                                                                                   19
+       Manual de Importação de questionário
+
+  Os registros/posições 179 a 188 equivalem a parte de "Produção própria
+      realizada no ativo imobilizado" e "Melhorias" do capítulo 18 do questionário
+      completo, "Aquisição (exceto Leasing), produção própria e melhorias do
+      ativo imobilizado no ano":
+
+  Os registros/posições 189 e 190 equivalem ao capítulo 18B do questionário
+      completo, "Ativo imobilizado":
+
+20
+                                                                                Manual de Importação de questionário
+
+ Os registros/posições 191 a 198 equivalem ao capítulo 19 do questionário
+    completo, "Forma de realização das vendas ­ Sistema de comercialização":
+
+ Os registros/posições 199 a 252 equivalem ao capítulo 20 do questionário
+    completo, "Dados de regionalização de toda empresa":
+
+                                                                                   21
+       Manual de Importação de questionário
+
+22
+                                                                                Manual de Importação de questionário
+
+ Os registros/posições 253 a 306 equivalem ao capítulo 21 do questionário
+    completo, "Dados de regionalização da atividade de comércio":
+
+                                                                                   23
+           Manual de Importação de questionário
+
+7. Anexo ­ Layout de Importação
+
+Posição                         Descrição                                      Tamanho Observações Cód. Variável
+
+1 Raiz CNPJ da Sede                                                            8   Numérico
+
+2 Sufixo Sede                                                                  4   Numérico
+
+3 Dígito Verificador da Sede                                                   2   Numérico
+
+4 Razão Social                                                                 55  Texto     01
+
+5 Nome Fantasia                                                                55  Texto     02
+
+6 Site da Empresa                                                              70  Texto
+
+7 Sigla UF (SEDE)                                                              2   Texto
+
+8 Município (Nome do Município da Sede da Empresa)                             45  Texto
+
+9        Nome do Distrito (SEDE) Esse campo só será habilitado se o município  45  Texto
+
+         selecionado for "São Paulo", "Brasília" ou "Goiânia"
+
+10 Tipo de Logradouro (SEDE) (rua, avenida, rodovia, etc..)                    60  Texto
+
+11 Nome do Logradouro (SEDE)                                                   52  Texto     03
+
+12 Número (SEDE)                                                               6   Texto     04
+
+13 Complemento (SEDE)                                                          15  Texto     05
+
+14 Bairro/Distrito/Localidade (SEDE)                                           45  Texto     06
+
+15 CEP (SEDE)                                                                  8   Numérico  07
+
+16 DDD (SEDE)                                                                  2   Numérico  08
+
+17 Telefone (SEDE)                                                             9   Numérico  09
+
+18 Ramal (SEDE)                                                                5   Numérico  10
+
+19 E-mail da empresa                                                           50  Texto     14
+
+20 Descrição da principal atividade(maior receita) da empresa                  66  Texto     15
+
+21 Código da CNAE 2.0                                                          4   Numérico  16
+
+22 Dígito Verificador do Código da CNAE 2.0                                    1   Numérico
+
+23 Sufixo da Unidade de Coleta                                                 4   Numérico
+
+24
+                                                                         Manual de Importação de questionário
+
+Posição                     Descrição                                    Tamanho Observações Cód. Variável
+
+24 DV da Unidade de Coleta                                               2   Numérico
+
+25 Sigla UF (UNIDADE DE COLETA)                                          2   Texto                             27
+
+26 Município (Nome do Município da UC da Empresa)                        45  Texto
+
+         Nome do Distrito (UNIDADE DE COLETA) Esse campo só será
+
+27 habilitado se o município selecionado for "São Paulo", "Brasília" ou  45  Texto
+
+         "Goiânia"
+
+28       Tipo de Logradouro (UNIDADE DE COLETA) (rua, avenida, rodovia,  60  Texto
+         etc..)
+
+29 Nome do Logradouro (UNIDADE DE COLETA)                                52  Texto                             18
+
+30 Número (UNIDADE DE COLETA)                                            6   Texto                             19
+
+31 Complemento (UNIDADE DE COLETA)                                       15  Texto                             20
+
+32 Bairro/Distrito/Localidade (UNIDADE DE COLETA)                        45  Texto                             21
+
+33 CEP (UNIDADE DE COLETA)                                               8   Numérico                          22
+
+34 DDD (UNIDADE DE COLETA)                                               2   Numérico                          23
+
+35 Telefone (UNIDADE DE COLETA)                                          9   Numérico                          24
+
+36 Ramal (UNIDADE DE COLETA)                                             5   Numérico                          25
+
+37 Nome (Dados do responsável pelo preenchimento)                        55  Texto                             30
+
+38 Cargo (Dados do responsável pelo preenchimento)                       55  Texto                             31
+
+39 DDD (Dados do responsável pelo preenchimento)                         2   Numérico                          32
+
+40 Telefone (Dados do responsável pelo preenchimento)                    9   Numérico                          33
+
+41 Ramal (Dados do responsável pelo preenchimento)                       5   Numérico                          34
+
+42 E-mail (Dados do responsável pelo preenchimento)                      50  Texto                             29
+
+                                                                             Texto. Sendo:
+
+                                                                             01 - Em operação
+
+                                                                             03 - Paralisada c/
+
+43 01. Situação Cadastral em 31/12/XXXX                                  2   informação de
+
+                                                                             receita
+
+                                                                             04 - Extinta c/
+
+                                                                             informação de
+
+                                                                             receita
+
+                                                                                                                   25
+    Manual de Importação de questionário
+
+Posição  Descrição                                                         Tamanho Observações Cód. Variável
+
+                                                                               Texto - Valor.
+
+                                                                               Sendo:
+
+                                                                               00 - Não houve
+
+                                                                               mudanças - 00
+
+                                                                               01 - Fusão ou
+
+                                                                               cisão total - 01
+
+                                                                               02 - Cisão parcial -
+
+                                                                               02
+
+                                                                               03 - Incorporação
+
+                                                                               de/ por outra(s)
+
+                                                                               empresa(s) - 03
+
+                                                                               06 - Alteração de
+
+                                                                               CNPJ por outros
+
+44 02. Mudanças na Estrutura da Empresa no Ano de XXXX                     2   motivos ou outras
+
+                                                                               formas de ligação
+
+                                                                               entre empresas
+
+                                                                               (esclareça em
+
+                                                                               "OBSERVAÇÕE
+
+                                                                               S") - 06
+
+                                                                               06A -
+
+                                                                               Compartilhamento
+
+                                                                               ou concentração
+
+                                                                               de custos e
+
+                                                                               despesas
+
+                                                                               (esclareça em
+
+                                                                               "OBSERVAÇÕE
+
+                                                                               S") ­ 6A
+
+45 01 ­ Mês: 01A. Data da Ocorrência para os ítens 03 e 04 da Situação     2   Numérico
+          Cadastral
+                                                                           4   Numérico
+46 02 ­ Ano: 01A. Data da Ocorrência para os ítens 03 e 04 da Situação
+          Cadastral                                                        8   Numérico
+
+47 03. Raiz Primeiro CNPJ de Ligação da Empresa
+
+48 03. Sufixo Primeiro CNPJ de Ligação da Empresa                          4   Numérico
+
+49 03. Dígito Verificador Primeiro CNPJ de Ligação da Empresa              2   Numérico
+
+50 03. Raiz Segundo CNPJ de Ligação da Empresa                             8   Numérico
+
+51 03. Sufixo Segundo CNPJ de Ligação da Empresa                           4   Numérico
+
+52 03. Dígito Verificador Segundo CNPJ de Ligação da Empresa               2   Numérico
+
+53 03. Raiz Terceiro CNPJ de Ligação da Empresa                            8   Numérico
+
+54 03. Sufixo Terceiro CNPJ de Ligação da Empresa                          4   Numérico
+
+55 03. Dígito Verificador Terceiro CNPJ de Ligação da Empresa              2   Numérico
+
+56 Item 1: 04 - Principais Mercadorias Revendidas por Ordem de             80  Texto
+          Predominância na Receita, inclusive por Representação Comercial
+
+57       Item 2: 04 - Principais Mercadorias Revendidas por Ordem de       80  Texto
+         Predominância na Receita, inclusive por Representação Comercial
+
+26
+                                                                                Manual de Importação de questionário
+
+Posição                           Descrição                                       Tamanho  Observações             Cód. Variável
+
+58       Item 3: 04 - Principais Mercadorias Revendidas por Ordem de              80       Texto
+
+         Predominância na Receita, inclusive por Representação Comercial
+
+                                                                                           Numérico. Sendo:
+
+                                                                                           1 - Lucro Real
+
+                                                                                           2 - Lucro Presumido ou
+
+59 05. Forma de Tributação Utilizada pela Empresa                                 1        Arbitrado
+
+                                                                                           3 - Sistema "Simples
+
+                                                                                           Nacional"
+
+                                                                                           4 - Imune ou Isenta
+
+                                                                                           Numérico. Sendo:
+
+         O endereço atual da UNIDADE DE COLETA é diferente do informado                    1 ­ Sim
+
+60       no ano anterior?                                                         1        2 ­ Não
+
+                                                                                           3 ­ Empresa NOVA na
+
+                                                                                           Pesquisa
+
+                                                                                           Numérico. Sendo:
+
+         O endereço atual da SEDE da empresa é diferente do informado no                   1 ­ Sim
+
+61       ano anterior?                                                            1        2 ­ Não
+
+                                                                                           3 ­ Empresa NOVA na
+
+                                                                                           Pesquisa
+
+                                                                                           Numérico. Sendo:
+
+62       A Razão Social informada é diferente da informada no ano anterior?       1        1 ­ Sim
+
+                                                                                           2 ­ Não
+
+63 Razão Social anterior                                                          55       Texto
+
+64 Motivo da alteração                                                            200      Texto
+
+65 Atividade anterior da empresa                                                  66       Texto
+
+         Pessoal Assalariado ­ Em 31/03
+
+66       Ligado a atividade comercial ou de representação (gerentes de vendas,    5        Numérico                   001
+         supervisores, vendedores, balconistas, caixas, representante comercial,
+
+         empacotadores, frentistas, etc. )
+
+         Pessoal Assalariado ­ Em 31/03
+
+67 Não ligado a atividade comercial (presidente, diretores, pessoal               5        Numérico                   002
+
+         administrativo e ligado a outras atividades, etc.)
+
+68       Pessoal Não Assalariado (Proprietário e sócios com atividade na          5        Numérico                   003
+
+         empresa) ­ Em 31/03
+
+69       Pessoal Não Assalariado (Membros da Família sem remuneração) ­           5        Numérico                   004
+         Em 31/03
+
+         Pessoal Assalariado ­ Em 30/06
+
+70       Ligado a atividade comercial ou de representação (gerentes de vendas,    5        Numérico                   006
+
+         supervisores, vendedores, balconistas, caixas, representante comercial,
+
+         empacotadores, frentistas, etc. )
+
+         Pessoal Assalariado ­ Em 30/06
+
+71 Não ligado a atividade comercial (presidente, diretores, pessoal               5        Numérico                   007
+
+         administrativo e ligado a outras atividades, etc.)
+
+72       Pessoal Não Assalariado (Proprietário e sócios com atividade na          5        Numérico                   008
+         empresa) ­ Em 30/06
+
+73       Pessoal Não Assalariado (Membros da Família sem remuneração) ­           5        Numérico                   009
+
+         Em 30/06
+
+                                                                                                                           27
+    Manual de Importação de questionário
+
+Posição                         Descrição                                          Tamanho Observações Cód. Variável
+
+         Pessoal Assalariado ­ Em 30/09
+
+74       Ligado a atividade comercial ou de representação (gerentes de vendas,     5  Numérico   011
+         supervisores, vendedores, balconistas, caixas, representante comercial,
+                                                                                                 012
+         empacotadores, frentistas, etc. )                                                       013
+                                                                                                 014
+         Pessoal Assalariado ­ Em 30/09                                                          016
+
+75 Não ligado a atividade comercial (presidente, diretores, pessoal                5  Numérico   017
+                                                                                                 018
+         administrativo e ligado a outras atividades, etc.)                                      019
+                                                                                                 021
+76 Pessoal Não Assalariado (Proprietário e sócios com atividade na                 5  Numérico  021A
+          empresa) ­ Em 30/09
+
+77 Pessoal Não Assalariado (Membros da Família sem remuneração) ­                  5  Numérico
+          Em 30/09
+                                                                                   5  Numérico
+          Pessoal Assalariado ­ Em 31/12
+78 Ligado a atividade comercial ou de representação (gerentes de vendas,           5  Numérico
+
+          supervisores, vendedores, balconistas, caixas, representante comercial,  5  Numérico
+          empacotadores, frentistas, etc. )
+          Pessoal Assalariado ­ Em 31/12
+79 Não ligado a atividade comercial (presidente, diretores, pessoal
+          administrativo e ligado a outras atividades, etc.)
+
+80 Pessoal Não Assalariado (Proprietário e sócios com atividade na
+          empresa) ­ Em 31/12
+
+81       Pessoal Não Assalariado (Membros da Família sem remuneração) ­            5  Numérico
+         Em 31/12
+
+82 Revenda de mercadorias (no caso de cooperativa, inclua as vendas a              12 Numérico
+          cooperados e de mercadorias de cooperados) - Receita Bruta
+
+83       Comissões sobre vendas de representação comercial e agentes de            12 Numérico
+         comércio
+
+84 Venda de produtos de fabricação própria - Receita Bruta                         12 Numérico  022
+
+85 Serviços de manutenção e reparação (veículos, eletrodomésticos,                 12 Numérico  023
+          computadores, telefones, relógios, etc.) - Receita Bruta
+
+86 Royalties de franquias - Receita Bruta                                          12 Numérico  024
+
+         Outras atividades (lanchonetes, restaurantes, armazenagem,
+
+87 transporte, exploração de estacionamento, instalação e manutenção               12 Numérico  025
+
+         elétrica ou hidráulica, agropecuária, etc.) - Receita Bruta
+
+88       Vendas canceladas, abatimentos e descontos incondicionais (-) -           12 Numérico  026
+         Deduções
+
+89 ICMS sobre vendas (-) - Deduções                                                12 Numérico  027
+
+90 PIS/PASEP(-) - Deduções                                                         12 Numérico  028
+
+91 Outros impostos e contribuições sobre vendas (IPI, ISS, SIMPLES                 12 Numérico  029
+          NACIONAL, COFINS) (-) - Deduções
+
+92 Aluguel de imóveis, máquinas e equipamentos                                     12 Numérico  031
+
+93 Receitas financeiras (juros, descontos obtidos, etc.)                           12 Numérico  032
+
+94 Variações monetárias ativas                                                     12 Numérico  033
+
+28
+                                                                            Manual de Importação de questionário
+
+Posição                          Descrição                                      Tamanho Observações Cód. Variável
+
+95 Resultado positivo em participações societárias e em sociedades em           12  Numérico         034
+          conta de participação
+
+96 Demais receitas operacionais (recuperação de despesas, etc.)                 12 Numérico          035
+
+97 Outras receitas - lucro na alienação de bens do ativo imobilizado, etc.      12 Numérico          036
+
+98 Varejo (vendas ao público em geral)                                          12 Numérico          038
+
+         Atacado (exportações, vendas à instituições públicas, comerciais,
+
+99 indústrias, profissionais liberais, autônomos, agricultores, prestadores     12 Numérico          039
+
+         de serviços - restaurantes, bares, oficinas, etc.)
+
+100 Exportação direta - verificar correspondência com o Código 039 -            3   Numérico         041
+          Percentual
+
+101 Vendas a outras empresas - verificar correspondência com o Código           3   Numérico         042
+          039 ­ Percentual
+
+102      Vendas para órgãos, empresas e instituições públicas - verificar       3   Numérico         043
+         correspondência com o Código 039 ­ Percentual
+
+103 Vendas ao público em geral - verificar correspondência com o Código         3   Numérico         044
+          038 (varejo) ­ Percentual
+
+         Mercadorias para revenda (inclusive mercadorias de cooperados. Inclua
+
+104 os fretes e seguros sobre as compras e não inclua as devoluções e os        12 Numérico          046
+
+         impostos recuperáveis)
+
+105 Matérias-primas para fabricação própria (deve preencher o Código 022)       12 Numérico          047
+
+106 Material de embalagem e outros materiais (de reposição, peças, etc.)        12 Numérico           048
+                                                                                                      050
+107 Mercadorias para revenda (inclusive mercadorias de cooperados) - Em         12 Numérico           051
+          31/12/<Ano Anterior>                                                                        052
+                                                                                                      053
+108 Produtos acabados e em elaboração (ver Código 022) - Em 31/12/<Ano          12 Numérico           055
+          Anterior>                                                                                   056
+                                                                                                      057
+109      Matérias-primas para fabricação própria (ver Código 022) - Em          12 Numérico           058
+         31/12/<Ano Anterior>
+                                                                                                     059A1
+110 Material de embalagem e outros materiais (de reposição, peças, etc.) -      12 Numérico
+          Em 31/12/<Ano Anterior>
+
+111 Mercadorias para revenda (inclusive mercadorias de cooperados) - Em         12 Numérico
+          31/12/<Ano Atual>
+
+112 Produtos acabados e em elaboração (ver Código 022) - Em 31/12/<Ano          12  Numérico
+          Atual>
+
+113 Matérias-primas para fabricação própria (ver Código 022) - Em               12 Numérico
+          31/12/<Ano Atual>
+
+114 Material de embalagem e outros materiais (de reposição, peças, etc.)        12 Numérico
+115 Método de Valoração dos estoques
+                                                                                    Numérico.
+
+                                                                                    Sendo:
+
+                                                                                1   1 - Custo Médio
+
+                                                                                    2 - PEPS
+
+                                                                                    3 ­ UEPS
+
+                                                                                    4 - Outro
+
+                                                                                                                  29
+     Manual de Importação de questionário
+
+Posição                  Descrição                                                 Tamanho Observações Cód. Variável
+
+116 Se responder o item 059A1 com "4 ­ Outro" é necessário discriminar             30  Texto     059B1
+                                                                                                  060
+117      Custo das mercadorias revendidas (valor contábil apurado e levado à       12 Numérico    061
+         DRE) (Código 046 + 050 ­ 055)                                                            062
+                                                                                                  063
+118 Salários e outras remunerações (inclusive 13º salário, férias, horas           12 Numérico    064
+          extras, etc.) - não incluir bolsa paga a estagiários (código 090)                       065
+                                                                                                  066
+119 Participação nos lucros (somente a parte distribuída aos empregados) e         12  Numérico   067
+          honorários da diretoria                                                                 068
+                                                                                                 068A
+120      Retiradas pró-labore do proprietário ou sócios com atividade na           12 Numérico    070
+         empresa (vide instrução)
+
+          Contribuições para a Previdência Social (parte da empresa, ou seja,      12 Numérico
+121 não incluir a parte descontada dos salários dos empregados, nem os             12 Numérico
+                                                                                   12 Numérico
+          recolhimentos relativos aos autônomos)
+          FGTS (se tiver empregados e não preencher, justificar em
+122 OBSERVAÇÕES) não incluir os 50% do FGTS pagos por motivos de
+          dispensa (cód. 067)
+123 Contribuições para a previdência privada (parte da empresa, ou seja,
+          não incluir a parte descontada dos salários dos empregados)
+
+124 Indenizações trabalhistas, rescisões contratuais e por dispensa                12 Numérico
+          incentivada - inclusive os 50% do FGTS                                   12 Numérico
+
+          Benefícios concedidos aos empregados (transporte, alimentação,
+125 auxílio-educação, planos de saúde, auxílio-doença, seguro de vida em
+
+          grupo, treinamento, etc.)
+
+126 PIS sobre folha de pagamento (somente se for contribuinte nesta                12 Numérico
+          modalidade)
+
+127 Aluguéis de imóveis                                                            12 Numérico
+
+128 Aluguéis de máquinas, equipamentos e veículos                                  12 Numérico   070A
+                                                                                                  071
+129 Condomínios - inclusive taxas de Administração de shopping, galerias,          12 Numérico    072
+          etc.                                                                                    073
+                                                                                                  074
+130 Comissões pagas a representantes comerciais e outros intermediários            12 Numérico    075
+                                                                                                  076
+131 Publicidade e propaganda (feiras, eventos, lançamento de produtos,             12 Numérico    077
+          promoções de vendas, material promocional e marketing)                                  078
+                                                                                                  079
+         Combustíveis, peças e acessórios consumidos nos meios de
+
+132 transporte próprios - inclusive o consumo de forma geral (veículos,            12 Numérico
+                                                                                   12 Numérico
+         geradores, empilhadeiras, atividade administrativa, etc.)                 12 Numérico
+
+133      Serviços prestados por profissionais liberais ou autônomos (pessoas
+         físicas) - inclusive os carreteiros, despachantes, etc.
+
+         Serviços técnico-profissionais (serviços jurídicos, contabilidade,
+
+134 auditoria, consultoria, informática, pesquisa de mercado, serviços de
+
+         arquitetura e engenharia, etc.) - Serviços prestados por empresas
+
+135 Vigilância, segurança e transporte de valores - Serviços prestados por         12 Numérico
+          empresas (pessoas jurídicas)
+
+136      Fretes e carretos (não inclua os fretes sobre as compras - Código 046) -  12  Numérico
+         Serviços prestados por empresas (pessoas jurídicas)
+
+         Mão-de-obra contratada temporariamente junto à empresas locadoras
+
+137 de mão-de-obra (vide instrução) - Serviços prestados por empresas              12 Numérico
+          (pessoas jurídicas)
+
+30
+                                                                          Manual de Importação de questionário
+
+Posição                              Descrição                                     Tamanho Observações Cód. Variável
+
+138 Manutenção e reparação de imóveis, instalações, máquinas, veículos e           12 Numérico  080
+          equipamentos - Serviços prestados por empresas (pessoas jurídicas)
+
+         Outros serviços prestados por empresas (limpeza, zeladoria,
+
+139 portaria, dedetização, cobranças, organização de feiras e congressos,          12 Numérico  081
+
+         etc.) - Serviços prestados por empresas (pessoas jurídicas)
+
+140 Serviços de comunicação (correio, fax, telefone e internet)                    12 Numérico  082
+
+141 Energia elétrica, gás, água e esgoto                                           12 Numérico  083
+
+142      Armazenagem, despesas portuárias, aeroportuárias e despesas com           12 Numérico  084
+         importação e exportação
+
+143 Prêmios de seguros (imóveis, veículos, mercadorias, etc.)                      12 Numérico  085
+
+144 Impostos e taxas (IPTU, IPVA, IOF, alvarás, etc). Não incluir ICMS,            12 Numérico  086
+          ISS, COFINS, PIS, IPI, SIMPLES NACIONAL, etc.
+
+145 Viagens e representações (inclusive diárias e estadias)                        12 Numérico  087
+
+146 Material de expediente, de uso, de consumo, de escritório e de limpeza         12 Numérico  088
+
+147 Royalties pelo uso de marcas, patentes e franquias                             12 Numérico  089
+
+148 PIS/ COFINS sobre outras receitas (Códs. 031 a 036)                            12 Numérico  089B
+
+         Demais despesas operacionais - não inclua despesas financeiras                          090
+
+149      (Cód.093/094), depreciação (Cód. 098) ; provisão para IRPJ e CSLL         12 Numérico  090A1
+         (Cód.100); pagamento de IRPJ e CSLL (Cód.100) e constituição das          50 Texto     090B1
+                                                                                                090A2
+         demais provisões (Cód.101)                                                             090B2
+                                                                                                090A3
+150      Item 1: Discrimine os principais valores do código 090 quando                          090B3
+         ultrapassar 30% do total - Código 091
+                                                                                                 092
+151 Valor 1: Discrimine os principais valores do código 090 quando                 12 Numérico   093
+          ultrapassar 30% do total - Código 091
+
+152 Item 2: Discrimine os principais valores do código 090 quando                  50 Texto
+          ultrapassar 30% do total - Código 091
+
+153      Valor 2: Discrimine os principais valores do código 090 quando            12 Numérico
+         ultrapassar 30% do total - Código 091
+
+154 Item 3: Discrimine os principais valores do código 090 quando                  50 Texto
+          ultrapassar 30% do total - Código 091
+
+155      Valor 3: Discrimine os principais valores do código 090 quando            12 Numérico
+         ultrapassar 30% do total - Código 091
+
+         Despesas com arrendamento mercantil financeiro (leasing financeiro) de
+
+156 máquinas, equipamentos e veículos (inclua também os juros do                   12 Numérico
+          arrendamento mercantil operacional e não inclua o valor do bem
+
+         registrado no ativo)
+
+157      Despesas financeiras - inclusive factoring, taxa de juros de longo prazo  12 Numérico
+         e despesas bancárias
+
+                                                                                                                31
+     Manual de Importação de questionário
+
+Posição                          Descrição                                      Tamanho Observações Cód. Variável
+
+158 Variações monetárias passivas                                               12 Numérico   094
+
+159 Comissões pagas a administradoras de cartão de crédito                      12 Numérico   095
+
+160 Resultado negativo em participações societárias e em sociedades em          12 Numérico   096
+          conta de participação
+
+         Depreciação e amortização (valores relativos ao ano - não inclua
+
+161 depreciação e amortização acumulada em nenhum código. Incluir               12 Numérico   098
+          parcelas de amortização de arrendamento mercantil operacional
+
+         (leasing operacional))
+
+          Outras despesas (impairrment, prejuízo na alienação de bens do ativo  12 Numérico   099
+162 imobilizado, perdas no recebimento de crédito, perdas de estoque, etc.)
+
+163 Provisão para IRPJ e CSLL (não inclua constituição de ativo fiscal de       12 Numérico   100
+          IRPJ e CSLL ­ Cód. 036)
+
+         Outras provisões constituídas (provisão para contingências, provisão
+
+164 para créditos de liquidação duvidosa, provisão para perdas com estoque      12 Numérico   101
+
+         etc. - As reversões de provisões devem ser informadas no Cód. 036).
+
+165      Lucro: Preencher se (030 + 037) > [ (049 + 054 - 059) + (069 + 091 +   12 Numérico   103
+         097 + 102) ] Capítulo 18
+
+166 Prejuízo: Preencher se (030 + 037) < [ (049 + 054 - 059) + (069 + 091       12 Numérico   104
+          + 097 + 102) ] Capítulo 18
+
+167 Terrenos - Aquisições de Terceiros                                          12 Numérico   105
+
+168 Edificações - Aquisições de Terceiros                                       12 Numérico   105A
+                                                                                12 Numérico    106
+169 Máquinas, equipamentos e instalações (exclusive processamento de            12 Numérico   106A
+          dados) - Aquisições de Terceiros                                      12 Numérico    107
+
+170      Microcomputadores e equipamentos de Telecomunicações -
+         Aquisições de Terceiros
+
+171 Meios de transporte - Aquisições de Terceiros
+
+172 Outros (móveis e utensílios etc) - Aquisições de Terceiros                  12 Numérico   108
+
+173 Terrenos                                                                    12 Numérico   110
+
+174 Edificações                                                                 12 Numérico   110A
+                                                                                12 Numérico    111
+175      Máquinas, equipamentos e instalações (exclusive processamento de       12 Numérico   111A
+         dados)
+
+176 Microcomputadores e equipamentos de Telecomunicações
+
+177 Meios de transporte                                                         12 Numérico   112
+
+178 Outros (móveis e utensílios etc) - Aquisições de Terceiros                  12 Numérico   113
+
+179 Edificações - Produção própria realizada no ativo imobilizado               12  Numérico  248
+
+180      Máquinas, equipamentos e instalações (exclusive processamento de       12  Numérico  249
+         dados) - Produção própria realizada no ativo imobilizado
+
+32
+                                                             Manual de Importação de questionário
+
+Posição                              Descrição                                  Tamanho Observações Cód. Variável
+
+181 Microcomputadores e equipamentos de Telecomunicações - Produção             12  Numérico  250
+          própria realizada no ativo imobilizado
+
+182 Outros (móveis e utensílios etc) ­ Produção própria realizada no ativo      12  Numérico  251
+          imobilizado
+
+183 Terrenos - Melhorias                                                        12  Numérico  253
+
+184 Edificações - Melhorias                                                     12  Numérico  254
+
+185      Máquinas, equipamentos e instalações (exclusive processamento de       12  Numérico  255
+         dados) - Melhorias
+
+186 Microcomputadores e equipamentos de Telecomunicações - Melhorias            12  Numérico  256
+
+187 Meios de transporte ­ Melhorias                                             12  Numérico  257
+
+188 Outros (móveis e utensílios etc) - Melhorias                                12  Numérico  258
+
+189 Total do Ativo Imobilizado <Ano Anterior>                                   12  Numérico  260
+
+190 Total do Ativo Imobilizado <Ano Atual>                                      12  Numérico  261
+
+         Lojas (vendas no balcão), estabelecimentos, postos de combustíveis,
+
+191 boxes em mercados, depósitos, galpões, armazéns e salas                     3   Numérico  115
+
+         (Percentual)
+         Quiosques, traillers e outros estabelecimentos situados em local fixo
+
+192 fora da loja em estradas, praças, rodoviárias, corredores de Shopping       3   Numérico  116
+
+         Centers, etc. (Percentual)
+
+193 Correio (Percentual)                                                        3   Numérico  117
+
+194 Porta a porta (domicílio), postos móveis ou por ambulantes (Percentual)     3   Numérico  118
+
+195 Internet (Percentual)                                                       3   Numérico  119
+
+196 Televendas (Percentual)                                                     3   Numérico  120
+
+197 Outros (especificar): (Percentual)                                          3   Numérico  121
+
+198 Especificar item 121                                                        50 Texto      121A1
+
+199 Rondônia - (Pessoal Ocupado em 31/12/XXXX)                                  5   Numérico  123
+
+200 Acre - (Pessoal Ocupado em 31/12/XXXX)                                      5   Numérico  124
+
+201 Amazonas - (Pessoal Ocupado em 31/12/XXXX)                                  5   Numérico  125
+
+202 Roraima - (Pessoal Ocupado em 31/12/XXXX)                                   5   Numérico  126
+
+203 Pará - (Pessoal Ocupado em 31/12/XXXX)                                      5   Numérico  127
+
+204 Amapá - (Pessoal Ocupado em 31/12/XXXX)                                     5   Numérico  128
+
+                                                                                                   33
+     Manual de Importação de questionário
+
+Posição  Descrição                                                       Tamanho Observações Cód. Variável
+
+205 Tocantins - (Pessoal Ocupado em 31/12/XXXX)                          5  Numérico  129
+
+206 Maranhão - (Pessoal Ocupado em 31/12/XXXX)                           5  Numérico  130
+
+207 Piauí - (Pessoal Ocupado em 31/12/XXXX)                              5  Numérico  131
+
+208 Ceará - (Pessoal Ocupado em 31/12/XXXX)                              5  Numérico  132
+
+209 Rio Grande do Norte - (Pessoal Ocupado em 31/12/XXXX)                5  Numérico  133
+
+210 Paraíba - (Pessoal Ocupado em 31/12/XXXX)                            5  Numérico  134
+
+211 Pernambuco - (Pessoal Ocupado em 31/12/XXXX)                         5  Numérico  135
+
+212 Alagoas - (Pessoal Ocupado em 31/12/XXXX)                            5  Numérico  136
+
+213 Sergipe - (Pessoal Ocupado em 31/12/XXXX)                            5  Numérico  137
+
+214 Bahia - (Pessoal Ocupado em 31/12/XXXX)                              5  Numérico  138
+
+215 Minas Gerais - (Pessoal Ocupado em 31/12/XXXX)                       5  Numérico  139
+
+216 Espírito Santo - (Pessoal Ocupado em 31/12/XXXX)                     5  Numérico  140
+
+217 Rio de Janeiro - (Pessoal Ocupado em 31/12/XXXX)                     5  Numérico  141
+
+218 São Paulo - (Pessoal Ocupado em 31/12/XXXX)                          5  Numérico  142
+
+219 Paraná - (Pessoal Ocupado em 31/12/XXXX)                             5  Numérico  143
+
+220 Santa Catarina - (Pessoal Ocupado em 31/12/XXXX)                     5  Numérico  144
+
+221 Rio Grande do Sul - (Pessoal Ocupado em 31/12/XXXX)                  5  Numérico  145
+
+222 Mato Grosso do Sul - (Pessoal Ocupado em 31/12/XXXX)                 5  Numérico  146
+
+223 Mato Grosso - (Pessoal Ocupado em 31/12/XXXX)                        5  Numérico  147
+
+224 Goiás - (Pessoal Ocupado em 31/12/XXXX)                              5  Numérico  148
+
+225 Distrito Federal - (Pessoal Ocupado em 31/12/XXXX)                   5  Numérico  149
+
+226      Rondônia - (Salários, Retiradas e Outras Remunerações no Ano -  12 Numérico  151
+         Valores em Reais)
+
+227 Acre - (Salários, Retiradas e Outras Remunerações no Ano - Valores   12 Numérico  152
+          em Reais)
+
+228 Amazonas - (Salários, Retiradas e Outras Remunerações no Ano -       12 Numérico  153
+          Valores em Reais)
+
+34
+                                                                         Manual de Importação de questionário
+
+Posição  Descrição                                                             Tamanho Observações Cód. Variável
+
+229 Roraima - (Salários, Retiradas e Outras Remunerações no Ano -              12 Numérico   154
+          Valores em Reais)
+
+230 Pará - (Salários, Retiradas e Outras Remunerações no Ano - Valores         12 Numérico   155
+          em Reais)
+
+231      Amapá - (Salários, Retiradas e Outras Remunerações no Ano - Valores   12 Numérico   156
+         em Reais)
+
+232 Tocantins - (Salários, Retiradas e Outras Remunerações no Ano -            12 Numérico   157
+          Valores em Reais)
+
+233      Maranhão - (Salários, Retiradas e Outras Remunerações no Ano -        12 Numérico   158
+         Valores em Reais)
+
+234 Piauí - (Salários, Retiradas e Outras Remunerações no Ano - Valores        12 Numérico   159
+          em Reais)
+
+235 Ceará - (Salários, Retiradas e Outras Remunerações no Ano - Valores        12 Numérico   160
+          em Reais)
+
+236      Rio Grande do Norte - (Salários, Retiradas e Outras Remunerações no   12 Numérico   161
+         Ano - Valores em Reais)
+
+237 Paraíba - (Salários, Retiradas e Outras Remunerações no Ano - Valores      12  Numérico  162
+          em Reais)
+
+238      Pernambuco - (Salários, Retiradas e Outras Remunerações no Ano -      12 Numérico   163
+         Valores em Reais)
+
+239 Alagoas - (Salários, Retiradas e Outras Remunerações no Ano -              12 Numérico   164
+          Valores em Reais)
+
+240 Sergipe - (Salários, Retiradas e Outras Remunerações no Ano - Valores      12  Numérico  165
+          em Reais)
+
+241      Bahia - (Salários, Retiradas e Outras Remunerações no Ano - Valores   12 Numérico   166
+         em Reais)
+
+242 Minas Gerais - (Salários, Retiradas e Outras Remunerações no Ano -         12 Numérico   167
+          Valores em Reais)
+
+243      Espírito Santo - (Salários, Retiradas e Outras Remunerações no Ano -  12 Numérico   168
+         Valores em Reais)
+
+244 Rio de Janeiro - (Salários, Retiradas e Outras Remunerações no Ano -       12 Numérico   169
+          Valores em Reais)
+
+245 São Paulo - (Salários, Retiradas e Outras Remunerações no Ano -            12 Numérico   170
+          Valores em Reais)
+
+246      Paraná - (Salários, Retiradas e Outras Remunerações no Ano - Valores  12 Numérico   171
+         em Reais)
+
+247 Santa Catarina - (Salários, Retiradas e Outras Remunerações no Ano -       12 Numérico   172
+          Valores em Reais)
+
+248      Rio Grande do Sul - (Salários, Retiradas e Outras Remunerações no     12 Numérico   173
+         Ano - Valores em Reais)
+
+249 Mato Grosso do Sul - (Salários, Retiradas e Outras Remunerações no         12 Numérico   174
+          Ano - Valores em Reais)
+
+250 Mato Grosso - (Salários, Retiradas e Outras Remunerações no Ano -          12 Numérico   175
+          Valores em Reais)
+
+251      Goiás - (Salários, Retiradas e Outras Remunerações no Ano - Valores   12 Numérico   176
+         em Reais)
+
+252 Distrito Federal - (Salários, Retiradas e Outras Remunerações no Ano -     12 Numérico   177
+          Valores em Reais)
+
+                                                                                                               35
+     Manual de Importação de questionário
+
+Posição  Descrição                                                          Tamanho Observações Cód. Variável
+
+253 Rondônia - (Unidades Locais com Receita de Revenda ou de Repres.        5  Numérico  179
+          Comercial (Nº de Unidades Locais))
+
+254      Acre - (Unidades Locais com Receita de Revenda ou de Repres.       5  Numérico  180
+         Comercial (Nº de Unidades Locais))
+
+255 Amazonas - (Unidades Locais com Receita de Revenda ou de Repres.        5  Numérico  181
+          Comercial (Nº de Unidades Locais))
+
+256 Roraima - (Unidades Locais com Receita de Revenda ou de Repres.         5  Numérico  182
+          Comercial (Nº de Unidades Locais))
+
+257      Pará - (Unidades Locais com Receita de Revenda ou de Repres.       5  Numérico  183
+         Comercial (Nº de Unidades Locais))
+
+258 Amapá - (Unidades Locais com Receita de Revenda ou de Repres.           5  Numérico  184
+          Comercial (Nº de Unidades Locais))
+
+259      Tocantins - (Unidades Locais com Receita de Revenda ou de Repres.  5  Numérico  185
+         Comercial (Nº de Unidades Locais))
+
+260 Maranhão - (Unidades Locais com Receita de Revenda ou de Repres.        5  Numérico  186
+          Comercial (Nº de Unidades Locais))
+
+261 Piauí - (Unidades Locais com Receita de Revenda ou de Repres.           5  Numérico  187
+          Comercial (Nº de Unidades Locais))
+
+262      Ceará - (Unidades Locais com Receita de Revenda ou de Repres.      5  Numérico  188
+         Comercial (Nº de Unidades Locais))
+
+263 Rio Grande do Norte - (Unidades Locais com Receita de Revenda ou de     5  Numérico  189
+          Repres. Comercial (Nº de Unidades Locais))
+
+264      Paraíba - (Unidades Locais com Receita de Revenda ou de Repres.    5  Numérico  190
+         Comercial (Nº de Unidades Locais))
+
+265 Pernambuco - (Unidades Locais com Receita de Revenda ou de              5  Numérico  191
+          Repres. Comercial (Nº de Unidades Locais))
+
+266 Alagoas - (Unidades Locais com Receita de Revenda ou de Repres.         5  Numérico  192
+          Comercial (Nº de Unidades Locais))
+
+267      Sergipe - (Unidades Locais com Receita de Revenda ou de Repres.    5  Numérico  193
+         Comercial (Nº de Unidades Locais))
+
+268 Bahia - (Unidades Locais com Receita de Revenda ou de Repres.           5  Numérico  194
+          Comercial (Nº de Unidades Locais))
+
+269      Minas Gerais - (Unidades Locais com Receita de Revenda ou de       5  Numérico  195
+         Repres. Comercial (Nº de Unidades Locais))
+
+270 Espírito Santo - (Unidades Locais com Receita de Revenda ou de          5  Numérico  196
+          Repres. Comercial (Nº de Unidades Locais))
+
+271 Rio de Janeiro - (Unidades Locais com Receita de Revenda ou de          5  Numérico  197
+          Repres. Comercial (Nº de Unidades Locais))
+
+272      São Paulo - (Unidades Locais com Receita de Revenda ou de Repres.  5  Numérico  198
+         Comercial (Nº de Unidades Locais))
+
+273 Paraná - (Unidades Locais com Receita de Revenda ou de Repres.          5  Numérico  199
+          Comercial (Nº de Unidades Locais))
+
+274      Santa Catarina - (Unidades Locais com Receita de Revenda ou de     5  Numérico  200
+         Repres. Comercial (Nº de Unidades Locais))
+
+275 Rio Grande do Sul - (Unidades Locais com Receita de Revenda ou de       5  Numérico  201
+          Repres. Comercial (Nº de Unidades Locais))
+
+276 Mato Grosso do Sul - (Unidades Locais com Receita de Revenda ou de      5  Numérico  202
+          Repres. Comercial (Nº de Unidades Locais))
+
+36
+                                                                           Manual de Importação de questionário
+
+Posição  Descrição                                                            Tamanho Observações Cód. Variável
+
+277 Mato Grosso - (Unidades Locais com Receita de Revenda ou de               5  Numérico  203
+          Repres. Comercial (Nº de Unidades Locais))
+
+278 Goiás - (Unidades Locais com Receita de Revenda ou de Repres.             5  Numérico  204
+          Comercial (Nº de Unidades Locais))
+
+279      Distrito Federal - (Unidades Locais com Receita de Revenda ou de     5  Numérico  205
+         Repres. Comercial (Nº de Unidades Locais))
+
+280 Rondônia - (Receita Bruta de Revenda ou de Representação Comercial        12 Numérico  207
+          no Ano (Valores em Reais))
+
+281      Acre - (Receita Bruta de Revenda ou de Representação Comercial no    12 Numérico  208
+         Ano (Valores em Reais))
+
+282 Amazonas - (Receita Bruta de Revenda ou de Representação                  12 Numérico  209
+          Comercial no Ano (Valores em Reais))
+
+283 Roraima - (Receita Bruta de Revenda ou de Representação Comercial         12 Numérico  210
+          no Ano (Valores em Reais))
+
+284      Pará - (Receita Bruta de Revenda ou de Representação Comercial no    12 Numérico  211
+         Ano (Valores em Reais))
+
+285 Amapá - (Receita Bruta de Revenda ou de Representação Comercial no        12 Numérico  212
+          Ano (Valores em Reais))
+
+286      Tocantins - (Receita Bruta de Revenda ou de Representação Comercial  12 Numérico  213
+         no Ano (Valores em Reais))
+
+287 Maranhão - (Receita Bruta de Revenda ou de Representação Comercial        12 Numérico  214
+          no Ano (Valores em Reais))
+
+288 Piauí - (Receita Bruta de Revenda ou de Representação Comercial no        12 Numérico  215
+          Ano (Valores em Reais))
+
+289      Ceará - (Receita Bruta de Revenda ou de Representação Comercial no   12 Numérico  216
+         Ano (Valores em Reais))
+
+290 Rio Grande do Norte - (Receita Bruta de Revenda ou de Representação       12 Numérico  217
+          Comercial no Ano (Valores em Reais))
+
+291      Paraíba - (Receita Bruta de Revenda ou de Representação Comercial    12 Numérico  218
+         no Ano (Valores em Reais))
+
+292 Pernambuco - (Receita Bruta de Revenda ou de Representação                12 Numérico  219
+          Comercial no Ano (Valores em Reais))
+
+293 Alagoas - (Receita Bruta de Revenda ou de Representação Comercial         12 Numérico  220
+          no Ano (Valores em Reais))
+
+294      Sergipe - (Receita Bruta de Revenda ou de Representação Comercial    12 Numérico  221
+         no Ano (Valores em Reais))
+
+295 Bahia - (Receita Bruta de Revenda ou de Representação Comercial no        12 Numérico  222
+          Ano (Valores em Reais))
+
+296      Minas Gerais - (Receita Bruta de Revenda ou de Representação         12 Numérico  223
+         Comercial no Ano (Valores em Reais))
+
+297 Espírito Santo - (Receita Bruta de Revenda ou de Representação            12 Numérico  224
+          Comercial no Ano (Valores em Reais))
+
+298 Rio de Janeiro - (Receita Bruta de Revenda ou de Representação            12 Numérico  225
+          Comercial no Ano (Valores em Reais))
+
+299      São Paulo - (Receita Bruta de Revenda ou de Representação Comercial  12 Numérico  226
+         no Ano (Valores em Reais))
+
+300 Paraná - (Receita Bruta de Revenda ou de Representação Comercial no       12 Numérico  227
+          Ano (Valores em Reais))
+
+                                                                                                                 37
+         Manual de Importação de questionário
+
+Posição  Descrição                                                                   Tamanho            Observações         Cód. Variável
+                                                                                                                                   228
+301 Santa Catarina - (Receita Bruta de Revenda ou de Representação Comercial         12 Numérico                                   229
+         no Ano (Valores em Reais))                                                                                                230
+                                                                                                                                   231
+302      Rio Grande do Sul - (Receita Bruta de Revenda ou de Representação           12 Numérico                                   232
+         Comercial no Ano (Valores em Reais))                                                                                      233
+
+303 Mato Grosso do Sul - (Receita Bruta de Revenda ou de Representação               12 Numérico                                  098A
+         Comercial no Ano (Valores em Reais))
+
+304 Mato Grosso - (Receita Bruta de Revenda ou de Representação Comercial            12 Numérico
+         no Ano (Valores em Reais))
+
+305 Goiás - (Receita Bruta de Revenda ou de Representação Comercial no Ano           12 Numérico
+         (Valores em Reais))
+
+306      Distrito Federal - (Receita Bruta de Revenda ou de Representação Comercial  12 Numérico
+         no Ano (Valores em Reais))
+
+                                                                                              Texto - Valor. Sendo:
+
+                                                                                              03 - A empresa recebe/envia
+
+                                                                                              valores a título de
+
+307 02A - Outras Formas de Ligação entre Empresas                                    2        compartilhamento ou
+                                                                                              concentração de custos e
+
+                                                                                              despesas
+
+                                                                                              00 - Não há outras formas de
+
+                                                                                              ligação entre empresas
+
+308 098A ­ Depreciação e amortização de ativos decorrentes de arrendamento           12 Numérico
+         operacional
+
+38
+

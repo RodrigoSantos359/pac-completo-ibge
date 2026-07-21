@@ -1,0 +1,73 @@
+CÓDIGO;DESCRIÇÃO DO CAMPO; VALOR 
+;RECEITAS; 257.087.500 
+;DEMONSTRATIVO DA RECEITA NO ANO; 279.470.326 
+;Receita Bruta; 23.914.814 
+21;Revenda de Mercadorias; 4.782.963 
+21A;Comissões sobre Vendas; 4.782.963 
+22;Venda de Produtos; 4.782.963 
+23;Serviço de manutenção; -   
+24;Royalties; 4.782.963 
+25;Outras atividades; 4.782.963 
+;Deduções; 255.555.512 
+26;(-) Vendas Canceladas; 255.555.512 
+27;(-) ICMS; -   
+28;(-) PIS / Pasep; -   
+29;(-) Demais Impostos sobre Vendas ( COFINS ); -   
+;DEMAIS RECEITAS;-22.382.826 
+31;Receita de Alugueis; -   
+32;Receita Financeira; 4.782.963 
+33;Variações Monetárias;-4.574.469 
+34;Receita Equivalência Patrimonial;-339.841 
+35;Demais Receitas Operacionais;-3.979.931 
+36;Outras Receitas ( Venda Imobilizado );-18.271.548 
+;CUSTOS; -   
+;Vincular as contas de ESTOQUE no ATIVO na aba BALANCETE:; Compras no ano 
+ESTOQUE;Mercadorias para Revenda; -   
+;CUSTO DAS MERCADORIAS VENDIDAS; -   
+CMV;Custo Mercadorias Vendidas; -   
+;DESPESAS NO ANO;-158.364.011 
+;GASTOS COM PESSOAL;-162.973.714 
+61;Salários e outras remunerações (13, férias, hora extra, etc); 4.782.963 
+62;Participação nos lucros; 4.782.963 
+63;Pró-labore; 6.252.596 
+64;INSS; 4.782.963 
+65;FGTS;-189.921.157 
+66;Previdência Privada; 4.782.963 
+67;Rescisões Trabalhistas ( Inclusive FGTS Rescisório ); 4.782.963 
+68;Demais Benefícios ( transporte, alimentação, seguro, etc );-3.219.967 
+;DESPESAS OPERACIONAIS; 4.609.703 
+70;Alugueis de Imóveis; -   
+70A;Alugueis de Veículos, Máquinas e Equipamentos;-869.427 
+71;Condominios;-251.841 
+72;Comissões pagas a representantes; -   
+73;Publicidade e propaganda;-163.372 
+74;Combustíveis e manutenção veículos e maquinários;-601.522 
+75;Serviços prestados por PF; 4.782.963 
+;Serviços prestados por PJ;
+76;Serviços técnico-profissionais (contador,advogado,etc);-287.175 
+77;Vigilancia, segurança e transporte de valores; -   
+78;Fretes ( sobre vendas ); -   
+79;-;-1.004.565 
+80;Manutenções diversas (instalações, veículos, máquinas);-348.082 
+81;Serviços diversos PJ;-4.253 
+82;Despesa com comunicação (correio, telefone, internet); 4.782.963 
+83;Energia, gás, agua e esgoto;-498.326 
+84;Armazenagem; -   
+85;Seguros; -   
+86;Despesas Tributárias (Impostos e taxas); -   
+87;Estadias e viagens;-1.124.923 
+88;Material de consumo, expediente, escritório e limpeza;-4.054.157 
+89;Royalties;-4.664 
+89B;PIS/COFINS demais receitas;-21.939 
+90;Outras Despesas Gerais; -   
+;Despesas Financeiras;
+92;Arrendamento mercantil;-256.598 
+93;Despesas financeiras;-17.985 
+94;Variação monetária passiva;-8.629 
+95;Taxa cartão de crédito; -   
+96;Resultado negativa equivalência patrimonial;-44.689 
+;Depreciações;
+98;Depreciação e amortização; 4.782.963 
+99;Perdas de mercadorias, imobilizado, crédito; -   
+100;Provisão IRPJ e CSLL;-177.040 
+101;Outras provisões ( PDD, Estoque ); -   
