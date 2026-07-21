@@ -1,4 +1,7 @@
-# 📊 Gerador PAC Completo IBGE
+<div>
+<img width="40" height="40" src="https://img.icons8.com/nolan/64/gps-receiving.png" alt="gps-receiving"/>
+<strong style="font-size:0.85rem;">Gerador PAC Completo IBGE</strong>
+</div>
 
 <div align="center">
 
