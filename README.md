@@ -1,6 +1,90 @@
-# 📊 Gerador PAC Completo IBGE - Web (PHP)
+# 📊 Gerador PAC Completo IBGE
 
-Sistema web para gerar arquivos CSV para importação no **PAC (Pesquisa Anual de Comércio) Completo do IBGE**. Consulta dados cadastrais automaticamente via BrasilAPI e permite integração com WK Radar para dados financeiros.
+<div align="center">
+
+![Vercel](https://img.shields.io/badge/deploy-vercel-000?logo=vercel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8.0+-777BB4?logo=php&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green)
+[![Live Demo](https://img.shields.io/badge/demo-online-success?logo=vercel)](https://pac-completo-ibge.vercel.app)
+
+### 🚀 **Sistema rodando ao vivo!**
+👉 **[https://pac-completo-ibge.vercel.app](https://pac-completo-ibge.vercel.app)** 👈
+
+</div>
+
+---
+
+## 📸 Preview
+
+<div align="center">
+
+### Página Inicial — Consulta de CNPJs
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  🟦 PAC                                      ⚙️ WK Radar  │
+│                📊 Gerador PAC Completo                      │
+│                                                             │
+│    Consulte dados cadastrais de uma ou várias empresas      │
+│    gratuitamente via BrasilAPI                              │
+│                                                             │
+│    ┌─────────────────────────────────────────────────┐       │
+│    │   Digite os CNPJs (um por linha)                │       │
+│    │   27865757000102                                │       │
+│    │   60820694000107                                │       │
+│    │   33000167000107                                │       │
+│    └─────────────────────────────────────────────────┘       │
+│                                                             │
+│           [ 🔍 Consultar CNPJs ]                            │
+│                                                             │
+│    ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐  │
+│    │1.Informar│  │2.Brasil  │  │3.WK Radar│  │4.Revisar │  │
+│    │  CNPJs   │  │   API    │  │(opcional)│  │ & Editar │  │
+│    └──────────┘  └──────────┘  └──────────┘  └──────────┘  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Editor Multi-Empresa com Abas
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  🟦 PAC                          ✅ 15/30 campos   [Início] │
+│                                                             │
+│     [Empresa A ✅] [Empresa B ⚠️] [Empresa C ✅]            │
+│                                                             │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │  📋 DADOS CADASTRAIS DA SEDE                        │   │
+│  │  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌──────────┐   │   │
+│  │  │CNPJ Raiz│ │ Sufixo  │ │   DV    │ │Razão     │   │   │
+│  │  │27865757 │ │ 0001    │ │   02    │ │Social... │   │   │
+│  │  └─────────┘ └─────────┘ └─────────┘ └──────────┘   │   │
+│  │  ...                                                  │   │
+│  └──────────────────────────────────────────────────────┘   │
+│                                                             │
+│              [ 👁️ Preview CSV ] [ 💾 Gerar CSV ]            │
+└─────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+> 💡 **Dica:** Para capturar screenshots reais, use a ferramenta do seu navegador:
+> 1. Acesse [pac-completo-ibge.vercel.app](https://pac-completo-ibge.vercel.app)
+> 2. Pressione `F12` → `Ctrl+Shift+P` → digite "screenshot"
+> 3. Escolha "Capture full size screenshot"
+> 4. Salve em `assets/img/` e substitua os placeholders acima
+
+---
+
+## ✨ Funcionalidades
+
+| Funcionalidade | Descrição |
+|---|---|
+| 🔍 **Consulta Automática** | Digite um ou vários CNPJs — dados cadastrais preenchidos automaticamente via BrasilAPI |
+| 🏢 **Multi-Empresa** | Suporte a lote de CNPJs com navegação por abas e CSV único |
+| 📊 **WK Radar** | Integração opcional para dados financeiros (balancete/DRE) |
+| ✏️ **Editor Completo** | Todos os campos do layout IBGE com validação em tempo real |
+| 📥 **Upload Econômico** | Importe dados de CSV/Excel com códigos econômicos |
+| 📄 **CSV Padrão IBGE** | Geração em ANSI, delimitador `;`, CRLF, sem aspas |
 
 ---
 
