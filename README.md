@@ -46,59 +46,6 @@
 
 ---
 
-## 🚀 Deploy no Vercel
-
-### Pré-requisitos
-
-- [Node.js](https://nodejs.org/) (18+)
-- [Vercel CLI](https://vercel.com/docs/cli): `npm i -g vercel`
-- Conta gratuita no [Vercel](https://vercel.com)
-
-### Passo a passo
-
-#### 1. Criar repositório no GitHub
-
-```bash
-# No diretório do projeto
-git init
-git add .
-git commit -m "Initial commit"
-
-# Crie um repositório no GitHub e depois:
-git remote add origin https://github.com/SEU_USUARIO/pac-completo-ibge.git
-git push -u origin master
-```
-
-#### 2. Fazer login no Vercel
-
-```bash
-vercel login
-```
-
-#### 3. Fazer deploy
-
-```bash
-# Deploy de produção (vinculado ao GitHub)
-vercel --prod
-
-# Ou siga o assistente interativo:
-vercel
-```
-
-**Importante:** Na primeira vez, o Vercel vai perguntar:
-- `Set up and deploy?` → `Y`
-- `Which scope?` → Selecione sua conta
-- `Link to existing project?` → `N`
-- `Project name?` → `pac-completo-ibge` (ou outro nome)
-- `Directory?` → `.` (pressione Enter)
-- `Override settings?` → `N`
-
-#### 4. Conectar ao GitHub (deploy automático)
-
-Após o primeiro deploy manual, acesse o [Dashboard do Vercel](https://vercel.com), vá em **Settings > Git** e conecte seu repositório GitHub. Assim, **cada push na branch `master` faz deploy automático**.
-
----
-
 ## 🖥️ Desenvolvimento Local
 
 ```bash
