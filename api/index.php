@@ -215,10 +215,10 @@ function renderHome(string $tipoAlerta = '', string $mensagem = ''): void
                 <div class="search-box" style="max-width:600px;flex-direction:column;">
                     <textarea id="cnpjs" class="form-input textarea-multi"
                         rows="4"
-                        placeholder="Digite os CNPJs (um por linha)&#10;Ex:&#10;27865757000102&#10;60820694000107&#10;33000167000107"
+                        placeholder="Digite os CNPJs (um por linha)&#10;Ex:&#10;27865757000102&#10;00279531001307&#10;08747503000137"
                         autocomplete="off" autofocus><?= htmlspecialchars($_SESSION['ultimos_cnpjs'] ?? '') ?></textarea>
                     <div style="display:flex;gap:0.75rem;justify-content:center;">
-                        <button type="button" id="searchBtn" class="btn btn-primary btn-lg" style="flex:1;">
+                        <button href="?action=atualizar" type="button" id="searchBtn" class="btn btn-primary btn-lg" style="flex:1;">
                             <img width="20" height="20" src="https://img.icons8.com/hatch/64/search.png" alt="search"/> Consultar CNPJs
                         </button>
                     </div>
@@ -649,7 +649,7 @@ function renderEditorMulti(array $empresas, int $ano): void
                                 <?php if ($validacao['valida']): ?>
                                     <span class="badge badge-success"><img src="/assets/img/icons8-ok.gif" alt="OK" width="20" height="20"> OK</span>
                                 <?php else: ?>
-                                    <img src="/assets/img/icons8-erro(1).gif" alt="Erro" width="20" height="20">
+                                    <!-- <img src="/assets/img/icons8-erro(1).gif" alt="Erro" width="20" height="20"> -->
                                     <span class="badge badge-warning"><img src="/assets/img/icons8-erro.gif" alt="Erro" width="20" height="20"><?= count($validacao['erros']) ?> pend.</span>
                                 <?php endif; ?>
                                 <div style="margin-top:0.5rem;">

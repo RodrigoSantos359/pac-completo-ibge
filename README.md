@@ -23,15 +23,15 @@
 
 ### Página Inicial — Consulta de CNPJs
 
-<img src="assets/img/preview-home.png" alt="Página inicial do PAC Completo IBGE" width="700">
+<img src="assets/img/preview-home.gif" alt="Página inicial do PAC Completo IBGE" width="660px" height="390px">
 
 ### Editor Multi-Empresa com Abas
 
-<img src="assets/img/preview-editor.png" alt="Editor multi-empresa do PAC Completo IBGE" width="700">
+<img src="assets/img/preview-editor.gif" alt="Editor multi-empresa do PAC Completo IBGE" width="660px" height="390px">
 
 ### Demonstrando o fluxo
 
-<img src="assets/img/tela_demonstrativa.gif" alt="Tela demonstrativa do fluxo do sistema PAC-completo-IBGE" width="700">
+<img src="assets/img/tela_demonstrativa.gif" alt="Tela demonstrativa do fluxo do sistema PAC-completo-IBGE" width="660px" height="390px">
 
 </div>
 
