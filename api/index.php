@@ -43,6 +43,9 @@ try {
         case 'salvar':
             handleSalvar();
             break;
+        case 'salvar_edicao':
+            handleSalvarEdicao();
+            break;
         case 'testar_wk':
             handleTestarWK();
             break;
@@ -614,6 +617,14 @@ function renderEditorMulti(array $empresas, int $ano): void
                 </div>
 
                 <input type="hidden" id="current_empresa_index" name="current_index" value="0">
+                <?php if (isset($_GET['tab'])): ?>
+                    <script>
+                        window.addEventListener('load', function () {
+                            var t = document.querySelector('[data-company-tab="<?= (int)$_GET['tab'] ?>"]');
+                            if (t) t.click();
+                        });
+                    </script>
+                <?php endif; ?>
 
                 <!-- ================================================================ -->
                 <!-- COMPANY PANELS -->
@@ -657,7 +668,7 @@ function renderEditorMulti(array $empresas, int $ano): void
                                         class="btn btn-sm btn-danger"
                                         onclick="return confirm('Remover <?= htmlspecialchars(addslashes($empresa['razao_social'] ?? 'esta empresa')) ?> da lista?')"
                                         style="font-size:0.75rem;padding:0.2rem 0.6rem;">
-                                        <img src="/assets/img/icons8-erro (1).gif" alt="Remover" width="20" height="20"> Remover
+                                        <img src="/assets/img/icons8-erro (1).gif" alt="Remover" width="20" height="20"> Remover Empresa
                                     </a>
                                 </div>
                             </div>
@@ -821,6 +832,15 @@ function renderEditorMulti(array $empresas, int $ano): void
                                         </div>
                                     </div>
                                 </div>
+                                <div style="margin-top:0.5rem;">
+                                    <button type="submit"
+                                        formaction="?action=salvar_edicao&idx=<?= $idx ?>"
+                                        formnovalidate
+                                        class="btn btn-sm btn-primary"
+                                        style="font-size:0.75rem;padding:0.2rem 0.6rem;">
+                                        <img src="/assets/img/icons8-ok.gif" alt="Salvar" width="20" height="20"> Salvar edições
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
@@ -832,6 +852,13 @@ function renderEditorMulti(array $empresas, int $ano): void
                                 <img width="30"height="30" src="https://img.icons8.com/external-gradients-pause-08/64/external-pin-travel2-gradients-pause-08.png" alt="external-pin-travel2-gradients-pause-08"/>
                                 <h2>Unidade de Coleta (UC)</h2>
                                 <span class="badge badge-info">Opcional - preencha se diferente da sede</span>
+                                <button type="submit"
+                                    formaction="?action=salvar_edicao&idx=<?= $idx ?>"
+                                    formnovalidate
+                                    class="btn btn-sm btn-primary"
+                                    style="font-size:0.75rem;padding:0.2rem 0.6rem;">
+                                    <img src="/assets/img/icons8-ok.gif" alt="Salvar" width="20" height="20"> Salvar edições
+                                </button>
                             </div>
                             <div class="card-body">
                                 <div class="data-grid">
@@ -1051,6 +1078,13 @@ function renderEditorMulti(array $empresas, int $ano): void
                                 <?php else: ?>
                                     <span class="badge badge-danger"><img width="20" height="20" src="/assets/img/icons8-erro (1).gif" alt="cancel"/> 0/<?= $pessoalTotal ?></span>
                                 <?php endif; ?>
+                                <button type="submit"
+                                    formaction="?action=salvar_edicao&idx=<?= $idx ?>"
+                                    formnovalidate
+                                    class="btn btn-sm btn-primary"
+                                    style="font-size:0.75rem;padding:0.2rem 0.6rem;">
+                                    <img src="/assets/img/icons8-ok.gif" alt="Salvar" width="20" height="20"> Salvar edições
+                                </button>
                             </div>
                             <div class="card-body">
                                 <p style="font-size:0.85rem;color:var(--gray-500);margin-bottom:1rem;">
@@ -1454,6 +1488,13 @@ function renderEditorMulti(array $empresas, int $ano): void
                         </select>
                     </div>
                     <div style="display:flex;gap:0.75rem;">
+                        <button type="submit"
+                            formaction="?action=salvar_edicao&idx=<?= $idx ?>"
+                            formnovalidate
+                            class="btn btn-sm btn-primary"
+                            style="font-size:0.75rem;padding:0.2rem 0.6rem;">
+                            <img src="/assets/img/icons8-ok.gif" alt="Salvar" width="20" height="20"> Salvar edições
+                        </button>
                         <a href="?" class="btn btn-secondary">↩️ Voltar</a>
                         <button type="button" id="previewCSVBtn" class="btn btn-primary btn-lg">
                             👁️ Preview CSV
@@ -1596,6 +1637,41 @@ function handleSalvar(): void
     $mapeamento = PACValidator::getMapeamentoDireto();
 
     foreach ($empresasPost as $idx => $dados) {
+        $empresa = normalizarEmpresaPost($dados, $mapeamento);
+
+        $empresas[] = $empresa;
+    }
+
+    // Salva na sessão atualizada
+    $_SESSION['empresas'] = $empresas;
+
+    // Gera CSV
+    try {
+        $generator = new PACGenerator((string)$ano);
+
+        // Nome do arquivo: pac_ano_totalempresas.csv
+        $nomeArquivo = sprintf('pac_%s_%d_empresas.csv', $ano, count($empresas));
+
+        // Histórico
+        $nomes = array_map(fn($e) => mb_substr($e['razao_social'] ?? 'N/A', 0, 30), $empresas);
+        $_SESSION['csv_history'][] = [
+            'empresas' => implode(', ', $nomes),
+            'arquivo' => $nomeArquivo,
+            'total' => count($empresas),
+        ];
+        $_SESSION['csv_history'] = array_slice($_SESSION['csv_history'], -20);
+
+        $generator->downloadCSV($empresas, $nomeArquivo);
+    } catch (Exception $e) {
+        renderHome('error', 'Erro ao gerar CSV: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Converte os dados de uma empresa vindos do formulário para o formato da sessão
+ */
+function normalizarEmpresaPost(array $dados, array $mapeamento): array
+{
         $empresa = $dados; // Captura TODOS os campos do formulário primeiro
 
         // Remove campos não-dados
@@ -1642,32 +1718,41 @@ function handleSalvar(): void
             }
         }
 
-        $empresas[] = $empresa;
+    return $empresa;
+}
+
+/**
+ * Salva na sessão as edições de UMA empresa, sem gerar CSV
+ */
+function handleSalvarEdicao(): void
+{
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        redirect('?action=editar');
     }
 
-    // Salva na sessão atualizada
+    $idx = (int)($_GET['idx'] ?? -1);
+    $empresas = $_SESSION['empresas'] ?? [];
+    $dados = $_POST['empresa'][$idx] ?? null;
+
+    if (!isset($empresas[$idx]) || !is_array($dados)) {
+        $_SESSION['flash_toast'] = ['message' => 'Empresa não encontrada.', 'type' => 'error'];
+        redirect('?action=editar');
+    }
+
+    if (isset($_POST['ano'])) {
+        $_SESSION['ano'] = $_POST['ano'];
+    }
+
+    $empresas[$idx] = normalizarEmpresaPost($dados, PACValidator::getMapeamentoDireto());
     $_SESSION['empresas'] = $empresas;
 
-    // Gera CSV
-    try {
-        $generator = new PACGenerator((string)$ano);
+    $razao = $empresas[$idx]['razao_social'] ?? 'Empresa';
+    $_SESSION['flash_toast'] = [
+        'message' => mb_substr($razao, 0, 60) . ': edições salvas!',
+        'type' => 'success'
+    ];
 
-        // Nome do arquivo: pac_ano_totalempresas.csv
-        $nomeArquivo = sprintf('pac_%s_%d_empresas.csv', $ano, count($empresas));
-
-        // Histórico
-        $nomes = array_map(fn($e) => mb_substr($e['razao_social'] ?? 'N/A', 0, 30), $empresas);
-        $_SESSION['csv_history'][] = [
-            'empresas' => implode(', ', $nomes),
-            'arquivo' => $nomeArquivo,
-            'total' => count($empresas),
-        ];
-        $_SESSION['csv_history'] = array_slice($_SESSION['csv_history'], -20);
-
-        $generator->downloadCSV($empresas, $nomeArquivo);
-    } catch (Exception $e) {
-        renderHome('error', 'Erro ao gerar CSV: ' . $e->getMessage());
-    }
+    redirect('?action=editar&tab=' . $idx);
 }
 
 // =========================================================================
