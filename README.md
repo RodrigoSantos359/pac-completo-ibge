@@ -29,6 +29,10 @@
 
 <img src="assets/img/preview-editor.png" alt="Editor multi-empresa do PAC Completo IBGE" width="700">
 
+### Demonstrando o fluxo
+
+<img src="assets/img/tela_demonstrativa.gif" alt="Tela demonstrativa do fluxo do sistema PAC-completo-IBGE" width="700">
+
 </div>
 
 ---
